@@ -8,6 +8,6 @@ class ListFunctionsTest extends FlatSpec with Matchers {
   }
 
   "ListFunctions.fold" should "return start value if List is empty" in {
-    ListFunctions.fold("", List.empty[Int])((s, i) => s + " " + i) shouldBe "1 2 3"
+    ListFunctions.fold("", List.empty[Int])((s, i) => s + " " + i) shouldBe ""
   }
 }

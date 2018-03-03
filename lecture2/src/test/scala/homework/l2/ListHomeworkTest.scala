@@ -13,10 +13,10 @@ class ListHomeworkTest extends FlatSpec with Matchers {
   }
 
   "ListHomework.multiplicationOfCubes" should "return multiplication of cubes for non empty list" in {
-    ListHomework.sumOfSquares(List(1, 2, 3)) shouldBe 216
+    ListHomework.multiplicationOfCubes(List(1, 2, 3)) shouldBe 216
   }
 
   "ListHomework.multiplicationOfCubes" should "return 1 for empty list" in {
-    ListHomework.sumOfSquares(List.empty) shouldBe 1
+    ListHomework.multiplicationOfCubes(List.empty) shouldBe 1
   }
 }
