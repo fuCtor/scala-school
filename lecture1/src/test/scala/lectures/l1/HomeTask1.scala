@@ -1,4 +1,5 @@
 package lectures.l1
+/*
 
 import org.scalatest.{FlatSpec, Matchers}
 
@@ -34,3 +35,5 @@ class CountRoundToLowerTest extends FlatSpec with Matchers {
     count(Seq(1000000000l)) shouldBe 1
   }
 }
+
+*/
