@@ -8,6 +8,9 @@ object PatternMatching1 extends App {
   def f1(xs: Seq[Int]): Unit = ???
   def f2(xs: Seq[Any]): Unit = ???
 
+  /**
+    * Вывести только те числа, у которых остаток от деления на 3 равен 0
+    */
   f1(Seq(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
   // 3
   // 6
