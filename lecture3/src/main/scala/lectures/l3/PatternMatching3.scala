@@ -8,7 +8,7 @@ case class Person(name: String, age: Int, address: Address)
   * fromRussia должен использовать RussianPerson для проверки адреса Person.
   * Если проверка выполняется, то fromRussia должен возвращать true.
   */
-class PatternMatching3 {
+object PatternMatching3 extends App {
   object RussianPerson {
     def unapply(person: Person): Option[String] = ???
   }
