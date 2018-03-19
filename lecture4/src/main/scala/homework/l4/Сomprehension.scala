@@ -1,4 +1,4 @@
-package lectures.l4
+package homework.l4
 
 /**
   * Помогите курьерам разобраться с обслуживанием адресов
