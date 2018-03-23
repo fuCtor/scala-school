@@ -31,3 +31,5 @@ val lecture2 = project.in(file("./lecture2")).settings(commonSettings)
 val lecture3 = project.in(file("./lecture3")).settings(commonSettings)
 
 val lecture4 = project.in(file("./lecture4")).settings(commonSettings)
+
+val lecture5 = project.in(file("./lecture5")).settings(commonSettings)
