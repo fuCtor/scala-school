@@ -24,7 +24,8 @@ object Calculator {
   def computeValues(namedExpressions: Map[String, Expr]): Map[String, Double] = ???
 
   def eval(expr: Expr, references: Map[String, Expr]): Double = ???
-
+  
+  // Данная функция должна вернуть значение переменной по имени 
   def getReferenceExpr(name: String, references: Map[String, Expr]): Expr = ???
 
 }
