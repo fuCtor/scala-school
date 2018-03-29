@@ -1,6 +1,5 @@
 import _root_.sbt.Keys._
 
-
 val commonSettings = Seq(
   version := "1.0",
 
@@ -33,3 +32,5 @@ val lecture3 = project.in(file("./lecture3")).settings(commonSettings)
 val lecture4 = project.in(file("./lecture4")).settings(commonSettings)
 
 val lecture5 = project.in(file("./lecture5")).settings(commonSettings)
+
+val lecture6 = project.in(file("./lecture6")).settings(commonSettings)
