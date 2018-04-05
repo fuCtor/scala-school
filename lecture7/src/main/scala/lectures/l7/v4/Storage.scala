@@ -3,11 +3,11 @@ package lectures.l7.v4
 import lectures.l7.Item
 
 
-trait Storage[K, V <: Item[K]] {
+trait Storage[K, +V <: Item[K]] {
   def persist[C >: V <: Item[K]](id: K, item: C): Storage[K, C]
 }
 
-class MemoryStorage[K, V <: Item[K]](private val storage: Map[K, V]) extends Storage[K, V] {
+class MemoryStorage[K, +V <: Item[K]](private val storage: Map[K, V]) extends Storage[K, V] {
   def persist[C >: V <: Item[K]](item: C): MemoryStorage[K, C] = persist(item.id, item)
 
   override def persist[C >: V <: Item[K]](id: K, item: C): MemoryStorage[K, C] = {
