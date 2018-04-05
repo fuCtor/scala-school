@@ -1,0 +1,26 @@
+package lectures.l7.v3
+
+import lectures.l7.Item
+
+
+trait Storage[K, V <: Item[K]] {
+  def persist[C >: V <: Item[K]](id: K, item: C): Storage[K, C]
+}
+
+class MemoryStorage[K, V <: Item[K]](storage: Map[K, V]) extends Storage[K, V] {
+  def persist[C >: V <: Item[K]](item: C): MemoryStorage[K, C] = persist(item.id, item)
+
+  override def persist[C >: V <: Item[K]](id: K, item: C): MemoryStorage[K, C] = {
+    val ns = storage.mapValues({ v: C => v })
+    new MemoryStorage[K, C](ns.updated(id, item))
+  }
+
+  override def toString: String = storage.toString()
+}
+
+object MemoryStorage {
+  def empty[K, V <: Item[K]] = new MemoryStorage[K, V](Map.empty)
+
+  def apply[K, V <: Item[K]](item: V): MemoryStorage[K, V] = empty.persist(item)
+}
+
