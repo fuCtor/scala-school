@@ -1,26 +1,16 @@
 package lectures.l7.v3
 
+/*
+ * Реализовать класс, который будет хранить в памяти элементы с типом V и ключом K
+ * Элементы должны реализовывать интерфейс Item, с типом ключа K
+ * Реализовать метод, который будет принимать только элемент для сохранения, без явного указания ключа
+ * Должен позволять помещать в хранилище объекты родительского типа С по-отношению к V,
+ * результатом будет хранилище с ключом K и типом C
+ */
+
 import lectures.l7.Item
-
-
-trait Storage[K, V <: Item[K]] {
-  def persist[C >: V <: Item[K]](id: K, item: C): Storage[K, C]
+trait Storage[K, V] {
+  def persist[C](id: K, item: C): Storage[K, C]
 }
 
-class MemoryStorage[K, V <: Item[K]](storage: Map[K, V]) extends Storage[K, V] {
-  def persist[C >: V <: Item[K]](item: C): MemoryStorage[K, C] = persist(item.id, item)
-
-  override def persist[C >: V <: Item[K]](id: K, item: C): MemoryStorage[K, C] = {
-    val ns = storage.mapValues({ v: C => v })
-    new MemoryStorage[K, C](ns.updated(id, item))
-  }
-
-  override def toString: String = storage.toString()
-}
-
-object MemoryStorage {
-  def empty[K, V <: Item[K]] = new MemoryStorage[K, V](Map.empty)
-
-  def apply[K, V <: Item[K]](item: V): MemoryStorage[K, V] = empty.persist(item)
-}
-
+class MemoryStorage
