@@ -2,6 +2,11 @@ package lectures.l7.v1
 
 /*
  * Реализовать класс, который будет хранить в памяти элементы с типом V и ключом K
+ * Элементы должны реализовывать интерфейс Item, с типом ключа K
+ * Реализовать метод, который будет принимать только один элемент для сохранения, без явного указания ключа
+ * Реализовать объект компаньен, который предоставит возможность создавать пустой MemoryStorage и MemoryStorage с одним элементом.
+ *
+ * Способ использования смотреть в Main
  */
 
 import lectures.l7.Item
@@ -9,4 +14,4 @@ trait Storage[K, V] {
   def persist(id: K, item: V): Storage[K, V]
 }
 
-class MemoryStorage
+class MemoryStorage[T] extends Storage[T, Item[T]]
