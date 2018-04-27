@@ -16,8 +16,9 @@ val commonSettings = Seq(
     "-language:_",
     "-Xexperimental"),
 
-  libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1",
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test",
+  libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.4",
+  libraryDependencies += "org.scalamock" %% "scalamock" % "4.1.0" % "test",
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test",
   libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.4" % "test"
 )
 
@@ -38,3 +39,5 @@ val lecture6 = project.in(file("./lecture6")).settings(commonSettings)
 val lecture7 = project.in(file("./lecture7")).settings(commonSettings)
 
 val lecture8 = project.in(file("./lecture8")).settings(commonSettings)
+
+val workshop1 = project.in(file("./workshop1")).settings(commonSettings)
