@@ -45,6 +45,7 @@ val `akka-http` = project.in(file("./akka-http")).settings(commonSettings)
       "com.typesafe.akka" %% "akka-http" % "10.1.1",
       "com.typesafe.akka" %% "akka-stream" % "2.5.11",
       "de.heikoseeberger" %% "akka-http-json4s" % "1.20.1",
+      "org.json4s" %% "json4s-jackson" % "3.5.3",
 
       "com.typesafe.akka" %% "akka-http-testkit" % "10.1.1" % Test
     )
