@@ -38,3 +38,14 @@ val lecture6 = project.in(file("./lecture6")).settings(commonSettings)
 val lecture7 = project.in(file("./lecture7")).settings(commonSettings)
 
 val lecture8 = project.in(file("./lecture8")).settings(commonSettings)
+
+val `akka-http` = project.in(file("./akka-http")).settings(commonSettings)
+  .settings(
+    libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-http" % "10.1.1",
+      "com.typesafe.akka" %% "akka-stream" % "2.5.11",
+      "de.heikoseeberger" %% "akka-http-json4s" % "1.20.1",
+
+      "com.typesafe.akka" %% "akka-http-testkit" % "10.1.1" % Test
+    )
+  )
