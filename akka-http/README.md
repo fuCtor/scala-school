@@ -7,8 +7,8 @@ https://iextrading.com/developer/docs/#stocks
 что у нашего приложение будет следующий api:
 
 ### Получения списка компаний
-Метод: GET
-Путь: api/stocks
+Метод: GET  
+Путь: api/stocks  
 Ожидаемые данные: массив json объектов
 ```json
 [
@@ -17,9 +17,9 @@ https://iextrading.com/developer/docs/#stocks
 ```
 
 ### Получение информации по компании
-Метод: GET
-Путь: api/stock
-Параметры: id - строка, идентификатор компании
+Метод: GET  
+Путь: api/stock  
+Параметры: id - строка, идентификатор компании  
 Ожидаемые данные: json объект
 ```json
 {
@@ -30,9 +30,9 @@ https://iextrading.com/developer/docs/#stocks
 ```
 
 ### Получение информации по выбранным компаниям
-Метод: GET
-Путь: api/stock/info
-Ожидаемые данные: массив json объектов
+Метод: GET  
+Путь: api/stock/info  
+Ожидаемые данные: массив json объектов  
 ```json
 [
     {
@@ -40,20 +40,20 @@ https://iextrading.com/developer/docs/#stocks
         "name": "Apple Inc.",
         "description": "Some company description",
         "prices": [
-            { "label": "Apr 9", close: 100.1 }
+            { "label": "Apr 9", "close": 100.1 }
         ]
     }
 ]
 ```
 
 ### Добавление выбранной компании
-Метод: PUT
-Путь: api/stock
-Параметры: id - строка, идентификатор компании
+Метод: PUT  
+Путь: api/stock  
+Параметры: id - строка, идентификатор компании  
 Ожидаемые данные: пустое тело
 
 ### Удаление выбранной компании
-Метод: DELETE
-Путь: api/stock
-Параметры: id - строка, идентификатор компании
+Метод: DELETE  
+Путь: api/stock  
+Параметры: id - строка, идентификатор компании  
 Ожидаемые данные: пустое тело
